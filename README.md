@@ -1,17 +1,15 @@
 # opensea
 
-A new Flutter project.
+This is an example of my personal implementation of Domain-Driven Design using riverpod freezed state_notifier. 
+I used OpenSea as the subject, based on the knowledge I gained from my recent work.
 
-## Getting Started
+By the way, OpenSea is the world's largest NFT marketplace.
+If you are interested, please visit
+https://opensea.io/
 
-This project is a starting point for a Flutter application.
+## app design
 
-A few resources to get you started if this is your first Flutter project:
+<img src="https://user-images.githubusercontent.com/509448/129324700-9bff1f57-4246-47dd-9f75-f4af0fc06361.png" width=400>
+<img src="https://user-images.githubusercontent.com/509448/129324730-f1d440d5-8fbd-4684-8944-6078be34c061.gif" width=400>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# opensea-app-flutter

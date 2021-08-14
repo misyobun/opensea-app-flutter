@@ -1,4 +1,4 @@
-# opensea
+# What is this?
 
 This is an example of my personal implementation of Domain-Driven Design using riverpod freezed state_notifier. 
 I used OpenSea as the subject, based on the knowledge I gained from my recent work.

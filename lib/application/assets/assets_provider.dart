@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:injectable/injectable.dart';
-import 'package:opensea/domain/asset/entities/assets.dart';
-import 'package:opensea/domain/asset/repository/assets_repository.dart';
-import 'package:opensea/injection.dart';
+import '../../domain/asset/entities/assets.dart';
+import '../../domain/asset/repository/assets_repository.dart';
+import '../../injection.dart';
 import '../../application/assets/assets_state.dart';
 
 final assetsProvider = StateNotifierProvider.autoDispose<AssetsNorifier>(
@@ -31,7 +31,6 @@ class AssetsNorifier extends StateNotifier<AssetsState> {
             isInitial: false,
             assets: Assets.empty(),
             failure: optionOf(failure)), (assets) {
-      
       state = state.copyWith(
           isInitial: false,
           assets: assets,

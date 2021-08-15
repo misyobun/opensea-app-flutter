@@ -2,6 +2,7 @@
 
 This is an example of my personal implementation of Domain-Driven Design using riverpod freezed state_notifier. 
 I used OpenSea as the subject, based on the knowledge I gained from my recent work.
+(reference: https://www.vagrantup.jp/entry/2021/08/15/204330)
 
 By the way, OpenSea is the world's largest NFT marketplace.
 

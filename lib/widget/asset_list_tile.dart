@@ -1,11 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/screen_util.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:opensea/domain/asset/entities/asset.dart';
 
 class AssetListTile extends StatelessWidget {
-  AssetListTile({@required this.asset});
+  AssetListTile({required this.asset});
   final Asset asset;
 
   final BoxDecoration _errorImagePlaceHolder = BoxDecoration(
@@ -52,6 +52,8 @@ class AssetListTile extends StatelessWidget {
   }
 
   Widget _buildInfo() {
+    final userName = asset.owner?.user?.username ?? '';
+    final profileImgUrl = asset.owner?.profileImgUrl ?? '';
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,7 +82,7 @@ class AssetListTile extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Text(
-              'owned by ${asset.owner.user.username}',
+              'owned by $userName',
               style: TextStyle(
                 fontSize: 10.0,
               ),
@@ -94,7 +96,7 @@ class AssetListTile extends StatelessWidget {
             Container(
               width: 18,
               child: CircleAvatar(
-                backgroundImage: NetworkImage(asset.owner.profileImgUrl),
+                backgroundImage: NetworkImage(profileImgUrl),
               ),
             ),
           ],

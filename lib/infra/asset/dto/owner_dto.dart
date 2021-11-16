@@ -10,10 +10,10 @@ part 'owner_dto.g.dart';
 @freezed
 abstract class OwnerDto with _$OwnerDto {
   const factory OwnerDto(
-      {UserDto user,
-      @JsonKey(name: 'profile_img_url') String profileImgUrl,
-      String address,
-      String config}) = _OwnerDto;
+      {required UserDto user,
+      @JsonKey(name: 'profile_img_url') String? profileImgUrl,
+      String? address,
+      String? config}) = _OwnerDto;
 
   factory OwnerDto.fromJson(Map<String, dynamic> json) =>
       _$OwnerDtoFromJson(json);
@@ -21,7 +21,7 @@ abstract class OwnerDto with _$OwnerDto {
 
 extension OwnerDtoToDomain on OwnerDto {
   Owner toDomain() => Owner(
-      user: user != null ? user.toDomain() : User(username: 'NoName'),
+      user: user.toDomain(),
       profileImgUrl: profileImgUrl ?? '',
       address: address ?? '',
       config: config ?? '');

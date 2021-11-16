@@ -8,30 +8,17 @@ import '../domain/asset/entities/asset.dart';
 import '../widget/asset_list_tile.dart';
 import '../widget/omsb_app_bar.dart';
 
-class AssetsPage extends StatefulWidget {
-  AssetsPage({Key key}) : super(key: key);
-
-  @override
-  _AssetsPageState createState() => _AssetsPageState();
-}
-
-class _AssetsPageState extends State<AssetsPage> {
+class AssetsPage extends ConsumerWidget {
   final _refreshController = RefreshController(initialRefresh: false);
 
   final _loadedAssets = <Asset>[];
-  @override
-  void initState() {
-    super.initState();
-    _initialFetch();
-  }
 
+  //assetsProvider
   @override
-  Widget build(BuildContext context) {
-    return ProviderListener(
-      onChange: onStateChanged,
-      provider: assetsProvider.state,
-      child: Scaffold(
-          body: Container(
+  Widget build(BuildContext context, WidgetRef ref) {
+    onStateChange(ref);
+    return Scaffold(
+      body: Container(
         padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 0.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -42,38 +29,36 @@ class _AssetsPageState extends State<AssetsPage> {
             SizedBox(height: 20),
           ],
         ),
-      )),
+      ),
     );
   }
 
-  void onStateChanged(BuildContext context, AssetsState state) {
-    state.failure.fold(() => {}, (failure) {
-      final message = failure.map(
-        unreachableNetwork: (_) => '通信できません。通信環境をご確認下さい。',
-        serverError: (_) => '通信に失敗しました。時間を置いてから確認下さい。',
-      );
-      Fluttertoast.showToast(msg: message);
+  void onStateChange(WidgetRef ref) {
+    ref.listen<AssetsState>(assetsProvider, (previous, next) {
+      previous?.failure.fold(() => {}, (failure) {
+        final message = failure.map(
+          unreachableNetwork: (_) => '通信できません。通信環境をご確認下さい。',
+          serverError: (_) => '通信に失敗しました。時間を置いてから確認下さい。',
+        );
+        Fluttertoast.showToast(msg: message);
+      });
+      if (_refreshController.isLoading) {
+        _refreshController.loadComplete();
+      }
+
+      if (_refreshController.isRefresh) {
+        _refreshController.refreshCompleted();
+      }
     });
-    if (_refreshController.isLoading) {
-      _refreshController.loadComplete();
-    }
-
-    if (_refreshController.isRefresh) {
-      _refreshController.refreshCompleted();
-    }
-  }
-
-  void _initialFetch() {
-    context.read(assetsProvider).fetchAssets();
   }
 
   Widget _buildReferesh(BuildContext context) {
-    return Consumer(builder: (context, watch, child) {
-      final isInitial = watch(isFetchInitial);
+    return Consumer(builder: (context, ref, child) {
+      final isInitial = ref.watch(isFetchInitial);
       if (isInitial) {
         return const Center(child: CircularProgressIndicator());
       }
-      final assets = watch(fetchAssets);
+      final assets = ref.watch(fetchAssets);
       if (assets.isNotEmpty) {
         _loadedAssets.addAll(assets);
         return SmartRefresher(
@@ -91,8 +76,8 @@ class _AssetsPageState extends State<AssetsPage> {
           ),
           enablePullDown: true,
           enablePullUp: true,
-          onRefresh: () => _onRefresh(context),
-          onLoading: () => _onLoading(context),
+          onRefresh: () => _onRefresh(ref),
+          onLoading: () => _onLoading(ref),
         );
       } else {
         return Center(child: Text('Assets情報はありません'));
@@ -100,12 +85,12 @@ class _AssetsPageState extends State<AssetsPage> {
     });
   }
 
-  void _onRefresh(BuildContext context) {
+  void _onRefresh(WidgetRef ref) {
     _loadedAssets.clear();
-    context.read(assetsProvider).fetchAssets(shouldReset: true);
+    ref.read(assetsProvider.notifier).fetchAssets(shouldReset: true);
   }
 
-  void _onLoading(BuildContext context) {
-    context.read(assetsProvider).fetchAssets();
+  void _onLoading(WidgetRef ref) {
+    ref.read(assetsProvider.notifier).fetchAssets();
   }
 }

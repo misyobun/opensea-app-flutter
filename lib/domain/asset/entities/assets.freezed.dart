@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'assets.dart';
 
@@ -9,12 +10,14 @@ part of 'assets.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$AssetsTearOff {
   const _$AssetsTearOff();
 
-// ignore: unused_element
-  _Assets call({@required List<Asset> assets}) {
+  _Assets call({required List<Asset> assets}) {
     return _Assets(
       assets: assets,
     );
@@ -22,15 +25,14 @@ class _$AssetsTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Assets = _$AssetsTearOff();
 
 /// @nodoc
 mixin _$Assets {
-  List<Asset> get assets;
+  List<Asset> get assets => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $AssetsCopyWith<Assets> get copyWith;
+  $AssetsCopyWith<Assets> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -50,10 +52,13 @@ class _$AssetsCopyWithImpl<$Res> implements $AssetsCopyWith<$Res> {
 
   @override
   $Res call({
-    Object assets = freezed,
+    Object? assets = freezed,
   }) {
     return _then(_value.copyWith(
-      assets: assets == freezed ? _value.assets : assets as List<Asset>,
+      assets: assets == freezed
+          ? _value.assets
+          : assets // ignore: cast_nullable_to_non_nullable
+              as List<Asset>,
     ));
   }
 }
@@ -77,17 +82,21 @@ class __$AssetsCopyWithImpl<$Res> extends _$AssetsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object assets = freezed,
+    Object? assets = freezed,
   }) {
     return _then(_Assets(
-      assets: assets == freezed ? _value.assets : assets as List<Asset>,
+      assets: assets == freezed
+          ? _value.assets
+          : assets // ignore: cast_nullable_to_non_nullable
+              as List<Asset>,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_Assets implements _Assets {
-  const _$_Assets({@required this.assets}) : assert(assets != null);
+  const _$_Assets({required this.assets});
 
   @override
   final List<Asset> assets;
@@ -100,14 +109,14 @@ class _$_Assets implements _Assets {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Assets &&
-            (identical(other.assets, assets) ||
-                const DeepCollectionEquality().equals(other.assets, assets)));
+        (other.runtimeType == runtimeType &&
+            other is _Assets &&
+            const DeepCollectionEquality().equals(other.assets, assets));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(assets);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(assets));
 
   @JsonKey(ignore: true)
   @override
@@ -116,11 +125,11 @@ class _$_Assets implements _Assets {
 }
 
 abstract class _Assets implements Assets {
-  const factory _Assets({@required List<Asset> assets}) = _$_Assets;
+  const factory _Assets({required List<Asset> assets}) = _$_Assets;
 
   @override
   List<Asset> get assets;
   @override
   @JsonKey(ignore: true)
-  _$AssetsCopyWith<_Assets> get copyWith;
+  _$AssetsCopyWith<_Assets> get copyWith => throw _privateConstructorUsedError;
 }

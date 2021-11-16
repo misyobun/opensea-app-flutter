@@ -4,13 +4,11 @@ import '../../../domain/asset/entities/user.dart';
 
 part 'owner.freezed.dart';
 
-
 @freezed
 abstract class Owner with _$Owner {
   const factory Owner(
-      {
-      @required User user,
-      @required String profileImgUrl,
-      @required String address,
-      @required String config}) = _Owner;  
+      {User? user,
+      required String profileImgUrl,
+      required String address,
+      required String config}) = _Owner;
 }

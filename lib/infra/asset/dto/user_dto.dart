@@ -7,7 +7,7 @@ part 'user_dto.g.dart';
 
 @freezed
 abstract class UserDto with _$UserDto {
-  const factory UserDto({String username}) = _UserDto;
+  const factory UserDto({required String username}) = _UserDto;
 
   factory UserDto.fromJson(Map<String, dynamic> json) =>
       _$UserDtoFromJson(json);
@@ -15,6 +15,6 @@ abstract class UserDto with _$UserDto {
 
 extension UserDtoToDomain on UserDto {
   User toDomain() {
-    return User(username: username ?? 'no name');
+    return User(username: username);
   }
 }

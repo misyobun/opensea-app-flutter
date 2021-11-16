@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'assets_failure.dart';
 
@@ -9,17 +10,18 @@ part of 'assets_failure.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$AssetsFailureTearOff {
   const _$AssetsFailureTearOff();
 
-// ignore: unused_element
   _UnreachableNetwork unreachableNetwork() {
     return const _UnreachableNetwork();
   }
 
-// ignore: unused_element
-  _ServerError serverError({@required int code, @required String message}) {
+  _ServerError serverError({required int code, required String message}) {
     return _ServerError(
       code: code,
       message: message,
@@ -28,33 +30,48 @@ class _$AssetsFailureTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $AssetsFailure = _$AssetsFailureTearOff();
 
 /// @nodoc
 mixin _$AssetsFailure {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult unreachableNetwork(),
-    @required TResult serverError(int code, String message),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() unreachableNetwork,
+    required TResult Function(int code, String message) serverError,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult unreachableNetwork(),
-    TResult serverError(int code, String message),
-    @required TResult orElse(),
-  });
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unreachableNetwork,
+    TResult Function(int code, String message)? serverError,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult unreachableNetwork(_UnreachableNetwork value),
-    @required TResult serverError(_ServerError value),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? unreachableNetwork,
+    TResult Function(int code, String message)? serverError,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult unreachableNetwork(_UnreachableNetwork value),
-    TResult serverError(_ServerError value),
-    @required TResult orElse(),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_UnreachableNetwork value) unreachableNetwork,
+    required TResult Function(_ServerError value) serverError,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_UnreachableNetwork value)? unreachableNetwork,
+    TResult Function(_ServerError value)? serverError,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_UnreachableNetwork value)? unreachableNetwork,
+    TResult Function(_ServerError value)? serverError,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -94,6 +111,7 @@ class __$UnreachableNetworkCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_UnreachableNetwork implements _UnreachableNetwork {
   const _$_UnreachableNetwork();
 
@@ -104,7 +122,8 @@ class _$_UnreachableNetwork implements _UnreachableNetwork {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _UnreachableNetwork);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _UnreachableNetwork);
   }
 
   @override
@@ -112,23 +131,29 @@ class _$_UnreachableNetwork implements _UnreachableNetwork {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult unreachableNetwork(),
-    @required TResult serverError(int code, String message),
+  TResult when<TResult extends Object?>({
+    required TResult Function() unreachableNetwork,
+    required TResult Function(int code, String message) serverError,
   }) {
-    assert(unreachableNetwork != null);
-    assert(serverError != null);
     return unreachableNetwork();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult unreachableNetwork(),
-    TResult serverError(int code, String message),
-    @required TResult orElse(),
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unreachableNetwork,
+    TResult Function(int code, String message)? serverError,
   }) {
-    assert(orElse != null);
+    return unreachableNetwork?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? unreachableNetwork,
+    TResult Function(int code, String message)? serverError,
+    required TResult orElse(),
+  }) {
     if (unreachableNetwork != null) {
       return unreachableNetwork();
     }
@@ -137,23 +162,29 @@ class _$_UnreachableNetwork implements _UnreachableNetwork {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult unreachableNetwork(_UnreachableNetwork value),
-    @required TResult serverError(_ServerError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_UnreachableNetwork value) unreachableNetwork,
+    required TResult Function(_ServerError value) serverError,
   }) {
-    assert(unreachableNetwork != null);
-    assert(serverError != null);
     return unreachableNetwork(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult unreachableNetwork(_UnreachableNetwork value),
-    TResult serverError(_ServerError value),
-    @required TResult orElse(),
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_UnreachableNetwork value)? unreachableNetwork,
+    TResult Function(_ServerError value)? serverError,
   }) {
-    assert(orElse != null);
+    return unreachableNetwork?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_UnreachableNetwork value)? unreachableNetwork,
+    TResult Function(_ServerError value)? serverError,
+    required TResult orElse(),
+  }) {
     if (unreachableNetwork != null) {
       return unreachableNetwork(this);
     }
@@ -185,21 +216,26 @@ class __$ServerErrorCopyWithImpl<$Res> extends _$AssetsFailureCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object code = freezed,
-    Object message = freezed,
+    Object? code = freezed,
+    Object? message = freezed,
   }) {
     return _then(_ServerError(
-      code: code == freezed ? _value.code : code as int,
-      message: message == freezed ? _value.message : message as String,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as int,
+      message: message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_ServerError implements _ServerError {
-  const _$_ServerError({@required this.code, @required this.message})
-      : assert(code != null),
-        assert(message != null);
+  const _$_ServerError({required this.code, required this.message});
 
   @override
   final int code;
@@ -214,18 +250,14 @@ class _$_ServerError implements _ServerError {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ServerError &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
-            (identical(other.message, message) ||
-                const DeepCollectionEquality().equals(other.message, message)));
+        (other.runtimeType == runtimeType &&
+            other is _ServerError &&
+            (identical(other.code, code) || other.code == code) &&
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(message);
+  int get hashCode => Object.hash(runtimeType, code, message);
 
   @JsonKey(ignore: true)
   @override
@@ -234,23 +266,29 @@ class _$_ServerError implements _ServerError {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult unreachableNetwork(),
-    @required TResult serverError(int code, String message),
+  TResult when<TResult extends Object?>({
+    required TResult Function() unreachableNetwork,
+    required TResult Function(int code, String message) serverError,
   }) {
-    assert(unreachableNetwork != null);
-    assert(serverError != null);
     return serverError(code, message);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult unreachableNetwork(),
-    TResult serverError(int code, String message),
-    @required TResult orElse(),
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unreachableNetwork,
+    TResult Function(int code, String message)? serverError,
   }) {
-    assert(orElse != null);
+    return serverError?.call(code, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? unreachableNetwork,
+    TResult Function(int code, String message)? serverError,
+    required TResult orElse(),
+  }) {
     if (serverError != null) {
       return serverError(code, message);
     }
@@ -259,23 +297,29 @@ class _$_ServerError implements _ServerError {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult unreachableNetwork(_UnreachableNetwork value),
-    @required TResult serverError(_ServerError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_UnreachableNetwork value) unreachableNetwork,
+    required TResult Function(_ServerError value) serverError,
   }) {
-    assert(unreachableNetwork != null);
-    assert(serverError != null);
     return serverError(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult unreachableNetwork(_UnreachableNetwork value),
-    TResult serverError(_ServerError value),
-    @required TResult orElse(),
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_UnreachableNetwork value)? unreachableNetwork,
+    TResult Function(_ServerError value)? serverError,
   }) {
-    assert(orElse != null);
+    return serverError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_UnreachableNetwork value)? unreachableNetwork,
+    TResult Function(_ServerError value)? serverError,
+    required TResult orElse(),
+  }) {
     if (serverError != null) {
       return serverError(this);
     }
@@ -284,11 +328,12 @@ class _$_ServerError implements _ServerError {
 }
 
 abstract class _ServerError implements AssetsFailure {
-  const factory _ServerError({@required int code, @required String message}) =
+  const factory _ServerError({required int code, required String message}) =
       _$_ServerError;
 
   int get code;
   String get message;
   @JsonKey(ignore: true)
-  _$ServerErrorCopyWith<_ServerError> get copyWith;
+  _$ServerErrorCopyWith<_ServerError> get copyWith =>
+      throw _privateConstructorUsedError;
 }

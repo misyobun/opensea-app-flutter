@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'owner.dart';
 
@@ -9,16 +10,18 @@ part of 'owner.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$OwnerTearOff {
   const _$OwnerTearOff();
 
-// ignore: unused_element
   _Owner call(
-      {@required User user,
-      @required String profileImgUrl,
-      @required String address,
-      @required String config}) {
+      {User? user,
+      required String profileImgUrl,
+      required String address,
+      required String config}) {
     return _Owner(
       user: user,
       profileImgUrl: profileImgUrl,
@@ -29,27 +32,26 @@ class _$OwnerTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Owner = _$OwnerTearOff();
 
 /// @nodoc
 mixin _$Owner {
-  User get user;
-  String get profileImgUrl;
-  String get address;
-  String get config;
+  User? get user => throw _privateConstructorUsedError;
+  String get profileImgUrl => throw _privateConstructorUsedError;
+  String get address => throw _privateConstructorUsedError;
+  String get config => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $OwnerCopyWith<Owner> get copyWith;
+  $OwnerCopyWith<Owner> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $OwnerCopyWith<$Res> {
   factory $OwnerCopyWith(Owner value, $Res Function(Owner) then) =
       _$OwnerCopyWithImpl<$Res>;
-  $Res call({User user, String profileImgUrl, String address, String config});
+  $Res call({User? user, String profileImgUrl, String address, String config});
 
-  $UserCopyWith<$Res> get user;
+  $UserCopyWith<$Res>? get user;
 }
 
 /// @nodoc
@@ -62,27 +64,38 @@ class _$OwnerCopyWithImpl<$Res> implements $OwnerCopyWith<$Res> {
 
   @override
   $Res call({
-    Object user = freezed,
-    Object profileImgUrl = freezed,
-    Object address = freezed,
-    Object config = freezed,
+    Object? user = freezed,
+    Object? profileImgUrl = freezed,
+    Object? address = freezed,
+    Object? config = freezed,
   }) {
     return _then(_value.copyWith(
-      user: user == freezed ? _value.user : user as User,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User?,
       profileImgUrl: profileImgUrl == freezed
           ? _value.profileImgUrl
-          : profileImgUrl as String,
-      address: address == freezed ? _value.address : address as String,
-      config: config == freezed ? _value.config : config as String,
+          : profileImgUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as String,
+      config: config == freezed
+          ? _value.config
+          : config // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
   @override
-  $UserCopyWith<$Res> get user {
+  $UserCopyWith<$Res>? get user {
     if (_value.user == null) {
       return null;
     }
-    return $UserCopyWith<$Res>(_value.user, (value) {
+
+    return $UserCopyWith<$Res>(_value.user!, (value) {
       return _then(_value.copyWith(user: value));
     });
   }
@@ -93,10 +106,10 @@ abstract class _$OwnerCopyWith<$Res> implements $OwnerCopyWith<$Res> {
   factory _$OwnerCopyWith(_Owner value, $Res Function(_Owner) then) =
       __$OwnerCopyWithImpl<$Res>;
   @override
-  $Res call({User user, String profileImgUrl, String address, String config});
+  $Res call({User? user, String profileImgUrl, String address, String config});
 
   @override
-  $UserCopyWith<$Res> get user;
+  $UserCopyWith<$Res>? get user;
 }
 
 /// @nodoc
@@ -110,36 +123,43 @@ class __$OwnerCopyWithImpl<$Res> extends _$OwnerCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object user = freezed,
-    Object profileImgUrl = freezed,
-    Object address = freezed,
-    Object config = freezed,
+    Object? user = freezed,
+    Object? profileImgUrl = freezed,
+    Object? address = freezed,
+    Object? config = freezed,
   }) {
     return _then(_Owner(
-      user: user == freezed ? _value.user : user as User,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User?,
       profileImgUrl: profileImgUrl == freezed
           ? _value.profileImgUrl
-          : profileImgUrl as String,
-      address: address == freezed ? _value.address : address as String,
-      config: config == freezed ? _value.config : config as String,
+          : profileImgUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as String,
+      config: config == freezed
+          ? _value.config
+          : config // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_Owner with DiagnosticableTreeMixin implements _Owner {
   const _$_Owner(
-      {@required this.user,
-      @required this.profileImgUrl,
-      @required this.address,
-      @required this.config})
-      : assert(user != null),
-        assert(profileImgUrl != null),
-        assert(address != null),
-        assert(config != null);
+      {this.user,
+      required this.profileImgUrl,
+      required this.address,
+      required this.config});
 
   @override
-  final User user;
+  final User? user;
   @override
   final String profileImgUrl;
   @override
@@ -166,26 +186,18 @@ class _$_Owner with DiagnosticableTreeMixin implements _Owner {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Owner &&
-            (identical(other.user, user) ||
-                const DeepCollectionEquality().equals(other.user, user)) &&
+        (other.runtimeType == runtimeType &&
+            other is _Owner &&
+            (identical(other.user, user) || other.user == user) &&
             (identical(other.profileImgUrl, profileImgUrl) ||
-                const DeepCollectionEquality()
-                    .equals(other.profileImgUrl, profileImgUrl)) &&
-            (identical(other.address, address) ||
-                const DeepCollectionEquality()
-                    .equals(other.address, address)) &&
-            (identical(other.config, config) ||
-                const DeepCollectionEquality().equals(other.config, config)));
+                other.profileImgUrl == profileImgUrl) &&
+            (identical(other.address, address) || other.address == address) &&
+            (identical(other.config, config) || other.config == config));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(user) ^
-      const DeepCollectionEquality().hash(profileImgUrl) ^
-      const DeepCollectionEquality().hash(address) ^
-      const DeepCollectionEquality().hash(config);
+      Object.hash(runtimeType, user, profileImgUrl, address, config);
 
   @JsonKey(ignore: true)
   @override
@@ -195,13 +207,13 @@ class _$_Owner with DiagnosticableTreeMixin implements _Owner {
 
 abstract class _Owner implements Owner {
   const factory _Owner(
-      {@required User user,
-      @required String profileImgUrl,
-      @required String address,
-      @required String config}) = _$_Owner;
+      {User? user,
+      required String profileImgUrl,
+      required String address,
+      required String config}) = _$_Owner;
 
   @override
-  User get user;
+  User? get user;
   @override
   String get profileImgUrl;
   @override
@@ -210,5 +222,5 @@ abstract class _Owner implements Owner {
   String get config;
   @override
   @JsonKey(ignore: true)
-  _$OwnerCopyWith<_Owner> get copyWith;
+  _$OwnerCopyWith<_Owner> get copyWith => throw _privateConstructorUsedError;
 }

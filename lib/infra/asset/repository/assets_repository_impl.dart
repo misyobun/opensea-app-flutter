@@ -1,5 +1,4 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import '../../../domain/asset/assets_failure.dart';
 import '../../../domain/asset/entities/assets.dart';
@@ -11,7 +10,7 @@ typedef _Executable<Type> = Future<Type> Function();
 
 @LazySingleton(as: AssetsRepository)
 class AssetsRepositoryImpl implements AssetsRepository {
-  const AssetsRepositoryImpl({@required this.assetsRemoteDatasource});
+  const AssetsRepositoryImpl({required this.assetsRemoteDatasource});
   final AssetsRemoteDatasource assetsRemoteDatasource;
 
   Future<Either<AssetsFailure, Assets>> fetchAssets(int offset) {
@@ -26,7 +25,6 @@ class AssetsRepositoryImpl implements AssetsRepository {
     try {
       return Right(await execution());
     } catch (e) {
-      print('e ->>> $e');
       return left(AssetsFailure.serverError(code: 500, message: 'fatal error'));
     }
   }

@@ -6,18 +6,22 @@ import '../../domain/asset/repository/assets_repository.dart';
 import '../../injection.dart';
 import '../../application/assets/assets_state.dart';
 
-final assetsProvider = StateNotifierProvider.autoDispose<AssetsNorifier>(
+final assetsProvider =
+    StateNotifierProvider.autoDispose<AssetsNorifier, AssetsState>(
   (ref) => locator<AssetsNorifier>(),
 );
 
-final fetchAssets = Provider.autoDispose(
-    (ref) => ref.watch(assetsProvider.state).assets.assets);
+final fetchAssets =
+    Provider.autoDispose((ref) => ref.watch(assetsProvider).assets.assets);
 final isFetchInitial =
-    Provider.autoDispose((ref) => ref.watch(assetsProvider.state).isInitial);
+    Provider.autoDispose((ref) => ref.watch(assetsProvider).isInitial);
 
 @injectable
 class AssetsNorifier extends StateNotifier<AssetsState> {
-  AssetsNorifier(this._assetsRepository) : super(AssetsState.initial());
+  AssetsNorifier(this._assetsRepository) : super(AssetsState.initial()) {
+    print('fetch Assets init');
+    fetchAssets();
+  }
 
   final AssetsRepository _assetsRepository;
 

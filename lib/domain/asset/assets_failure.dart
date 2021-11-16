@@ -7,7 +7,7 @@ abstract class AssetsFailure with _$AssetsFailure {
   const factory AssetsFailure.unreachableNetwork() = _UnreachableNetwork;
 
   const factory AssetsFailure.serverError({
-    @required int code,
-    @required String message,
+    required int code,
+    required String message,
   }) = _ServerError;
 }

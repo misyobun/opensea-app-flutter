@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'assets_dto.dart';
 
@@ -8,6 +9,10 @@ part of 'assets_dto.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 AssetsDto _$AssetsDtoFromJson(Map<String, dynamic> json) {
   return _AssetsDto.fromJson(json);
 }
@@ -16,30 +21,28 @@ AssetsDto _$AssetsDtoFromJson(Map<String, dynamic> json) {
 class _$AssetsDtoTearOff {
   const _$AssetsDtoTearOff();
 
-// ignore: unused_element
   _AssetsDto call(List<AssetDto> assets) {
     return _AssetsDto(
       assets,
     );
   }
 
-// ignore: unused_element
-  AssetsDto fromJson(Map<String, Object> json) {
+  AssetsDto fromJson(Map<String, Object?> json) {
     return AssetsDto.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $AssetsDto = _$AssetsDtoTearOff();
 
 /// @nodoc
 mixin _$AssetsDto {
-  List<AssetDto> get assets;
+  List<AssetDto> get assets => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AssetsDtoCopyWith<AssetsDto> get copyWith;
+  $AssetsDtoCopyWith<AssetsDto> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -59,10 +62,13 @@ class _$AssetsDtoCopyWithImpl<$Res> implements $AssetsDtoCopyWith<$Res> {
 
   @override
   $Res call({
-    Object assets = freezed,
+    Object? assets = freezed,
   }) {
     return _then(_value.copyWith(
-      assets: assets == freezed ? _value.assets : assets as List<AssetDto>,
+      assets: assets == freezed
+          ? _value.assets
+          : assets // ignore: cast_nullable_to_non_nullable
+              as List<AssetDto>,
     ));
   }
 }
@@ -87,22 +93,24 @@ class __$AssetsDtoCopyWithImpl<$Res> extends _$AssetsDtoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object assets = freezed,
+    Object? assets = freezed,
   }) {
     return _then(_AssetsDto(
-      assets == freezed ? _value.assets : assets as List<AssetDto>,
+      assets == freezed
+          ? _value.assets
+          : assets // ignore: cast_nullable_to_non_nullable
+              as List<AssetDto>,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AssetsDto with DiagnosticableTreeMixin implements _AssetsDto {
-  const _$_AssetsDto(this.assets) : assert(assets != null);
+  const _$_AssetsDto(this.assets);
 
   factory _$_AssetsDto.fromJson(Map<String, dynamic> json) =>
-      _$_$_AssetsDtoFromJson(json);
+      _$$_AssetsDtoFromJson(json);
 
   @override
   final List<AssetDto> assets;
@@ -123,14 +131,14 @@ class _$_AssetsDto with DiagnosticableTreeMixin implements _AssetsDto {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _AssetsDto &&
-            (identical(other.assets, assets) ||
-                const DeepCollectionEquality().equals(other.assets, assets)));
+        (other.runtimeType == runtimeType &&
+            other is _AssetsDto &&
+            const DeepCollectionEquality().equals(other.assets, assets));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(assets);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(assets));
 
   @JsonKey(ignore: true)
   @override
@@ -139,7 +147,7 @@ class _$_AssetsDto with DiagnosticableTreeMixin implements _AssetsDto {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AssetsDtoToJson(this);
+    return _$$_AssetsDtoToJson(this);
   }
 }
 
@@ -153,5 +161,6 @@ abstract class _AssetsDto implements AssetsDto {
   List<AssetDto> get assets;
   @override
   @JsonKey(ignore: true)
-  _$AssetsDtoCopyWith<_AssetsDto> get copyWith;
+  _$AssetsDtoCopyWith<_AssetsDto> get copyWith =>
+      throw _privateConstructorUsedError;
 }

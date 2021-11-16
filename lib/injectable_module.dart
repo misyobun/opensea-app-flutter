@@ -11,7 +11,7 @@ abstract class InjectableModule {
         connectTimeout: 60 * 1000,
         receiveTimeout: 60 * 1000,
         sendTimeout: 15 * 1000,
-        validateStatus: (code) => 200 <= code && code < 400,
+        validateStatus: (code) => 200 <= code! && code < 400,
       ),
     );
     return dio;

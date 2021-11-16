@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'owner_dto.dart';
 
@@ -8,6 +9,10 @@ part of 'owner_dto.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 OwnerDto _$OwnerDtoFromJson(Map<String, dynamic> json) {
   return _OwnerDto.fromJson(json);
 }
@@ -16,12 +21,11 @@ OwnerDto _$OwnerDtoFromJson(Map<String, dynamic> json) {
 class _$OwnerDtoTearOff {
   const _$OwnerDtoTearOff();
 
-// ignore: unused_element
   _OwnerDto call(
-      {UserDto user,
-      @JsonKey(name: 'profile_img_url') String profileImgUrl,
-      String address,
-      String config}) {
+      {required UserDto user,
+      @JsonKey(name: 'profile_img_url') String? profileImgUrl,
+      String? address,
+      String? config}) {
     return _OwnerDto(
       user: user,
       profileImgUrl: profileImgUrl,
@@ -30,27 +34,26 @@ class _$OwnerDtoTearOff {
     );
   }
 
-// ignore: unused_element
-  OwnerDto fromJson(Map<String, Object> json) {
+  OwnerDto fromJson(Map<String, Object?> json) {
     return OwnerDto.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $OwnerDto = _$OwnerDtoTearOff();
 
 /// @nodoc
 mixin _$OwnerDto {
-  UserDto get user;
+  UserDto get user => throw _privateConstructorUsedError;
   @JsonKey(name: 'profile_img_url')
-  String get profileImgUrl;
-  String get address;
-  String get config;
+  String? get profileImgUrl => throw _privateConstructorUsedError;
+  String? get address => throw _privateConstructorUsedError;
+  String? get config => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $OwnerDtoCopyWith<OwnerDto> get copyWith;
+  $OwnerDtoCopyWith<OwnerDto> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -59,9 +62,9 @@ abstract class $OwnerDtoCopyWith<$Res> {
       _$OwnerDtoCopyWithImpl<$Res>;
   $Res call(
       {UserDto user,
-      @JsonKey(name: 'profile_img_url') String profileImgUrl,
-      String address,
-      String config});
+      @JsonKey(name: 'profile_img_url') String? profileImgUrl,
+      String? address,
+      String? config});
 
   $UserDtoCopyWith<$Res> get user;
 }
@@ -76,26 +79,33 @@ class _$OwnerDtoCopyWithImpl<$Res> implements $OwnerDtoCopyWith<$Res> {
 
   @override
   $Res call({
-    Object user = freezed,
-    Object profileImgUrl = freezed,
-    Object address = freezed,
-    Object config = freezed,
+    Object? user = freezed,
+    Object? profileImgUrl = freezed,
+    Object? address = freezed,
+    Object? config = freezed,
   }) {
     return _then(_value.copyWith(
-      user: user == freezed ? _value.user : user as UserDto,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserDto,
       profileImgUrl: profileImgUrl == freezed
           ? _value.profileImgUrl
-          : profileImgUrl as String,
-      address: address == freezed ? _value.address : address as String,
-      config: config == freezed ? _value.config : config as String,
+          : profileImgUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as String?,
+      config: config == freezed
+          ? _value.config
+          : config // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 
   @override
   $UserDtoCopyWith<$Res> get user {
-    if (_value.user == null) {
-      return null;
-    }
     return $UserDtoCopyWith<$Res>(_value.user, (value) {
       return _then(_value.copyWith(user: value));
     });
@@ -109,9 +119,9 @@ abstract class _$OwnerDtoCopyWith<$Res> implements $OwnerDtoCopyWith<$Res> {
   @override
   $Res call(
       {UserDto user,
-      @JsonKey(name: 'profile_img_url') String profileImgUrl,
-      String address,
-      String config});
+      @JsonKey(name: 'profile_img_url') String? profileImgUrl,
+      String? address,
+      String? config});
 
   @override
   $UserDtoCopyWith<$Res> get user;
@@ -128,44 +138,53 @@ class __$OwnerDtoCopyWithImpl<$Res> extends _$OwnerDtoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object user = freezed,
-    Object profileImgUrl = freezed,
-    Object address = freezed,
-    Object config = freezed,
+    Object? user = freezed,
+    Object? profileImgUrl = freezed,
+    Object? address = freezed,
+    Object? config = freezed,
   }) {
     return _then(_OwnerDto(
-      user: user == freezed ? _value.user : user as UserDto,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserDto,
       profileImgUrl: profileImgUrl == freezed
           ? _value.profileImgUrl
-          : profileImgUrl as String,
-      address: address == freezed ? _value.address : address as String,
-      config: config == freezed ? _value.config : config as String,
+          : profileImgUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as String?,
+      config: config == freezed
+          ? _value.config
+          : config // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OwnerDto with DiagnosticableTreeMixin implements _OwnerDto {
   const _$_OwnerDto(
-      {this.user,
+      {required this.user,
       @JsonKey(name: 'profile_img_url') this.profileImgUrl,
       this.address,
       this.config});
 
   factory _$_OwnerDto.fromJson(Map<String, dynamic> json) =>
-      _$_$_OwnerDtoFromJson(json);
+      _$$_OwnerDtoFromJson(json);
 
   @override
   final UserDto user;
   @override
   @JsonKey(name: 'profile_img_url')
-  final String profileImgUrl;
+  final String? profileImgUrl;
   @override
-  final String address;
+  final String? address;
   @override
-  final String config;
+  final String? config;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -186,26 +205,18 @@ class _$_OwnerDto with DiagnosticableTreeMixin implements _OwnerDto {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _OwnerDto &&
-            (identical(other.user, user) ||
-                const DeepCollectionEquality().equals(other.user, user)) &&
+        (other.runtimeType == runtimeType &&
+            other is _OwnerDto &&
+            (identical(other.user, user) || other.user == user) &&
             (identical(other.profileImgUrl, profileImgUrl) ||
-                const DeepCollectionEquality()
-                    .equals(other.profileImgUrl, profileImgUrl)) &&
-            (identical(other.address, address) ||
-                const DeepCollectionEquality()
-                    .equals(other.address, address)) &&
-            (identical(other.config, config) ||
-                const DeepCollectionEquality().equals(other.config, config)));
+                other.profileImgUrl == profileImgUrl) &&
+            (identical(other.address, address) || other.address == address) &&
+            (identical(other.config, config) || other.config == config));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(user) ^
-      const DeepCollectionEquality().hash(profileImgUrl) ^
-      const DeepCollectionEquality().hash(address) ^
-      const DeepCollectionEquality().hash(config);
+      Object.hash(runtimeType, user, profileImgUrl, address, config);
 
   @JsonKey(ignore: true)
   @override
@@ -214,16 +225,16 @@ class _$_OwnerDto with DiagnosticableTreeMixin implements _OwnerDto {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OwnerDtoToJson(this);
+    return _$$_OwnerDtoToJson(this);
   }
 }
 
 abstract class _OwnerDto implements OwnerDto {
   const factory _OwnerDto(
-      {UserDto user,
-      @JsonKey(name: 'profile_img_url') String profileImgUrl,
-      String address,
-      String config}) = _$_OwnerDto;
+      {required UserDto user,
+      @JsonKey(name: 'profile_img_url') String? profileImgUrl,
+      String? address,
+      String? config}) = _$_OwnerDto;
 
   factory _OwnerDto.fromJson(Map<String, dynamic> json) = _$_OwnerDto.fromJson;
 
@@ -231,12 +242,13 @@ abstract class _OwnerDto implements OwnerDto {
   UserDto get user;
   @override
   @JsonKey(name: 'profile_img_url')
-  String get profileImgUrl;
+  String? get profileImgUrl;
   @override
-  String get address;
+  String? get address;
   @override
-  String get config;
+  String? get config;
   @override
   @JsonKey(ignore: true)
-  _$OwnerDtoCopyWith<_OwnerDto> get copyWith;
+  _$OwnerDtoCopyWith<_OwnerDto> get copyWith =>
+      throw _privateConstructorUsedError;
 }

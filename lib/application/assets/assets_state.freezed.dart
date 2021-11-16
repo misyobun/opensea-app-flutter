@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'assets_state.dart';
 
@@ -9,16 +10,18 @@ part of 'assets_state.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$AssetsStateTearOff {
   const _$AssetsStateTearOff();
 
-// ignore: unused_element
   _AssetsState call(
-      {@required bool isInitial,
-      @required Assets assets,
-      @required Option<AssetsFailure> failure,
-      @required int offset}) {
+      {required bool isInitial,
+      required Assets assets,
+      required Option<AssetsFailure> failure,
+      required int offset}) {
     return _AssetsState(
       isInitial: isInitial,
       assets: assets,
@@ -29,18 +32,18 @@ class _$AssetsStateTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $AssetsState = _$AssetsStateTearOff();
 
 /// @nodoc
 mixin _$AssetsState {
-  bool get isInitial;
-  Assets get assets;
-  Option<AssetsFailure> get failure;
-  int get offset;
+  bool get isInitial => throw _privateConstructorUsedError;
+  Assets get assets => throw _privateConstructorUsedError;
+  Option<AssetsFailure> get failure => throw _privateConstructorUsedError;
+  int get offset => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $AssetsStateCopyWith<AssetsState> get copyWith;
+  $AssetsStateCopyWith<AssetsState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -67,26 +70,33 @@ class _$AssetsStateCopyWithImpl<$Res> implements $AssetsStateCopyWith<$Res> {
 
   @override
   $Res call({
-    Object isInitial = freezed,
-    Object assets = freezed,
-    Object failure = freezed,
-    Object offset = freezed,
+    Object? isInitial = freezed,
+    Object? assets = freezed,
+    Object? failure = freezed,
+    Object? offset = freezed,
   }) {
     return _then(_value.copyWith(
-      isInitial: isInitial == freezed ? _value.isInitial : isInitial as bool,
-      assets: assets == freezed ? _value.assets : assets as Assets,
+      isInitial: isInitial == freezed
+          ? _value.isInitial
+          : isInitial // ignore: cast_nullable_to_non_nullable
+              as bool,
+      assets: assets == freezed
+          ? _value.assets
+          : assets // ignore: cast_nullable_to_non_nullable
+              as Assets,
       failure: failure == freezed
           ? _value.failure
-          : failure as Option<AssetsFailure>,
-      offset: offset == freezed ? _value.offset : offset as int,
+          : failure // ignore: cast_nullable_to_non_nullable
+              as Option<AssetsFailure>,
+      offset: offset == freezed
+          ? _value.offset
+          : offset // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 
   @override
   $AssetsCopyWith<$Res> get assets {
-    if (_value.assets == null) {
-      return null;
-    }
     return $AssetsCopyWith<$Res>(_value.assets, (value) {
       return _then(_value.copyWith(assets: value));
     });
@@ -122,33 +132,40 @@ class __$AssetsStateCopyWithImpl<$Res> extends _$AssetsStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object isInitial = freezed,
-    Object assets = freezed,
-    Object failure = freezed,
-    Object offset = freezed,
+    Object? isInitial = freezed,
+    Object? assets = freezed,
+    Object? failure = freezed,
+    Object? offset = freezed,
   }) {
     return _then(_AssetsState(
-      isInitial: isInitial == freezed ? _value.isInitial : isInitial as bool,
-      assets: assets == freezed ? _value.assets : assets as Assets,
+      isInitial: isInitial == freezed
+          ? _value.isInitial
+          : isInitial // ignore: cast_nullable_to_non_nullable
+              as bool,
+      assets: assets == freezed
+          ? _value.assets
+          : assets // ignore: cast_nullable_to_non_nullable
+              as Assets,
       failure: failure == freezed
           ? _value.failure
-          : failure as Option<AssetsFailure>,
-      offset: offset == freezed ? _value.offset : offset as int,
+          : failure // ignore: cast_nullable_to_non_nullable
+              as Option<AssetsFailure>,
+      offset: offset == freezed
+          ? _value.offset
+          : offset // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_AssetsState implements _AssetsState {
   const _$_AssetsState(
-      {@required this.isInitial,
-      @required this.assets,
-      @required this.failure,
-      @required this.offset})
-      : assert(isInitial != null),
-        assert(assets != null),
-        assert(failure != null),
-        assert(offset != null);
+      {required this.isInitial,
+      required this.assets,
+      required this.failure,
+      required this.offset});
 
   @override
   final bool isInitial;
@@ -167,26 +184,18 @@ class _$_AssetsState implements _AssetsState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _AssetsState &&
+        (other.runtimeType == runtimeType &&
+            other is _AssetsState &&
             (identical(other.isInitial, isInitial) ||
-                const DeepCollectionEquality()
-                    .equals(other.isInitial, isInitial)) &&
-            (identical(other.assets, assets) ||
-                const DeepCollectionEquality().equals(other.assets, assets)) &&
-            (identical(other.failure, failure) ||
-                const DeepCollectionEquality()
-                    .equals(other.failure, failure)) &&
-            (identical(other.offset, offset) ||
-                const DeepCollectionEquality().equals(other.offset, offset)));
+                other.isInitial == isInitial) &&
+            (identical(other.assets, assets) || other.assets == assets) &&
+            (identical(other.failure, failure) || other.failure == failure) &&
+            (identical(other.offset, offset) || other.offset == offset));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(isInitial) ^
-      const DeepCollectionEquality().hash(assets) ^
-      const DeepCollectionEquality().hash(failure) ^
-      const DeepCollectionEquality().hash(offset);
+      Object.hash(runtimeType, isInitial, assets, failure, offset);
 
   @JsonKey(ignore: true)
   @override
@@ -196,10 +205,10 @@ class _$_AssetsState implements _AssetsState {
 
 abstract class _AssetsState implements AssetsState {
   const factory _AssetsState(
-      {@required bool isInitial,
-      @required Assets assets,
-      @required Option<AssetsFailure> failure,
-      @required int offset}) = _$_AssetsState;
+      {required bool isInitial,
+      required Assets assets,
+      required Option<AssetsFailure> failure,
+      required int offset}) = _$_AssetsState;
 
   @override
   bool get isInitial;
@@ -211,5 +220,6 @@ abstract class _AssetsState implements AssetsState {
   int get offset;
   @override
   @JsonKey(ignore: true)
-  _$AssetsStateCopyWith<_AssetsState> get copyWith;
+  _$AssetsStateCopyWith<_AssetsState> get copyWith =>
+      throw _privateConstructorUsedError;
 }

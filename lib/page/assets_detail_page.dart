@@ -7,7 +7,7 @@ class AssetDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final asset = ModalRoute.of(context).settings.arguments as Asset;
+    final asset = ModalRoute.of(context)?.settings.arguments as Asset;
     return Scaffold(body: _AssetDetailPageContent(asset));
   }
 }
@@ -25,7 +25,7 @@ class _AssetDetailPageContent extends StatefulWidget {
 class _AssetDetailPageContentState extends State<_AssetDetailPageContent> {
   _AssetDetailPageContentState(this._asset);
 
-  WebViewController _controller;
+  late WebViewController _controller;
 
   final Asset _asset;
 

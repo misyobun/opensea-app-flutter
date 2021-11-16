@@ -4,7 +4,7 @@ part 'assets.freezed.dart';
 
 @freezed
 abstract class Assets with _$Assets {
-  const factory Assets({@required List<Asset> assets}) = _Assets;
+  const factory Assets({required List<Asset> assets}) = _Assets;
 
   factory Assets.empty() => Assets(assets: List.empty());
 }

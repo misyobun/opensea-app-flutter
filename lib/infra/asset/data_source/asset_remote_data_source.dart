@@ -15,7 +15,6 @@ class AssetsRemoteDatasourceImpl implements AssetsRemoteDatasource {
 
   @override
   Future<AssetsDto> fetchAssets(int offset) async {
-    print('url offset $offset');
     final url =
         'https://api.opensea.io/api/v1/assets?order_direction=desc&offset=$offset&limit=10';
     final response = await client.get<String>(url);

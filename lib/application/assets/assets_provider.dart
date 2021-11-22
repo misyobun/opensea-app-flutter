@@ -19,7 +19,6 @@ final isFetchInitial =
 @injectable
 class AssetsNorifier extends StateNotifier<AssetsState> {
   AssetsNorifier(this._assetsRepository) : super(AssetsState.initial()) {
-    print('fetch Assets init');
     fetchAssets();
   }
 

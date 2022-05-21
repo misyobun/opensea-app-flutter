@@ -16,4 +16,5 @@ https://opensea.io/
 
 ## Reference
 
-https://www.vagrantup.jp/entry/2021/08/15/204330
+JP: https://misyobun.hatenablog.com/entry/2021/08/15/204330
+EN: https://medium.com/@misyobun/an-example-of-domain-driven-design-development-in-a-flutter-app-98eeb6b2d55
